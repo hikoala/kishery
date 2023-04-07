@@ -19,22 +19,22 @@ const config = [
   // CommonJS
   {
     ...baseConfig,
-    output: { file: 'dist/fishery.js', format: 'cjs' },
+    output: { file: 'dist/kishery.js', format: 'cjs' },
     external,
   },
   // ES Modules
   {
     ...baseConfig,
-    output: { file: 'dist/fishery.mjs', format: 'es' },
+    output: { file: 'dist/kishery.mjs', format: 'es' },
     external,
   },
   // UMD
   {
     ...baseConfig,
     output: {
-      file: 'dist/fishery.umd.js',
+      file: 'dist/kishery.umd.js',
       format: 'umd',
-      name: 'Fishery',
+      name: 'kishery',
     },
     plugins: [...baseConfig.plugins, nodeResolve(), commonjs()],
     external: [],

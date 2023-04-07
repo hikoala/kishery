@@ -1,4 +1,4 @@
-import { Factory, DeepPartial, HookFn } from 'fishery';
+import { Factory, DeepPartial, HookFn } from 'kishery';
 
 class DateTime {
   private constructor(public date: Date) {}

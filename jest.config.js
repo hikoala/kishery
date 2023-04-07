@@ -4,6 +4,6 @@ module.exports = {
   testEnvironment: 'node',
   testMatch: ['**/lib/**/__tests__/*.+(ts|tsx|js)'],
   moduleNameMapper: {
-    fishery: '<rootDir>/lib/index',
+    kishery: '<rootDir>/lib/index',
   },
 };

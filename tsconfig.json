@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "target": "es5",
     "module": "ES2015",
     "outDir": "./dist",
@@ -10,7 +13,9 @@
     "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
-      "fishery": ["lib/index"]
+      "kishery": [
+        "lib/index"
+      ]
     }
   }
 }

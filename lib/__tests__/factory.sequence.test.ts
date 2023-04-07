@@ -1,4 +1,4 @@
-import { Factory } from 'fishery';
+import { Factory } from 'kishery';
 
 describe('sequence', () => {
   it('increments by one on build', () => {

@@ -1,33 +1,33 @@
-# Fishery
+# kishery
 
-[![CircleCI](https://circleci.com/gh/thoughtbot/fishery.svg?style=svg)](https://circleci.com/gh/thoughtbot/fishery)
+[![CircleCI](https://circleci.com/gh/thoughtbot/kishery.svg?style=svg)](https://circleci.com/gh/thoughtbot/kishery)
 
-Fishery is a library for setting up JavaScript objects for use in tests and
+kishery is a library for setting up JavaScript objects for use in tests and
 anywhere else you need to set up data. It is loosely modeled after the Ruby
 gem, [factory_bot][factory_bot].
 
-Fishery is built with TypeScript in mind. Factories accept typed parameters and
+kishery is built with TypeScript in mind. Factories accept typed parameters and
 return typed objects, so you can be confident that the data used in your tests
-is valid. If you aren't using TypeScript, that's fine too – Fishery still works,
+is valid. If you aren't using TypeScript, that's fine too – kishery still works,
 just without the extra typechecking that comes with TypeScript.
 
 ## Installation
 
-Install fishery with:
+Install kishery with:
 
 ```
-npm install --save-dev fishery
+npm install --save-dev kishery
 ```
 
 or
 
 ```
-yarn add --dev fishery
+yarn add --dev kishery
 ```
 
 ## Usage
 
-A factory is just a function that returns your object. Fishery provides
+A factory is just a function that returns your object. kishery provides
 several arguments to your factory function to help with common situations.
 After defining your factory, you can then call `build()` on it to build your
 objects. Here's how it's done:
@@ -36,7 +36,7 @@ objects. Here's how it's done:
 
 ```typescript
 // factories/user.ts
-import { Factory } from 'fishery';
+import { Factory } from 'kishery';
 import { User } from '../my-types';
 import postFactory from './post';
 
@@ -418,17 +418,17 @@ See the [CONTRIBUTING] document.
 Thank you, [contributors]!
 
 [contributing]: CONTRIBUTING.md
-[contributors]: https://github.com/thoughtbot/fishery/graphs/contributors
+[contributors]: https://github.com/thoughtbot/kishery/graphs/contributors
 
 ## Credits
 
 This project name was inspired by Patrick Rothfuss' _Kingkiller Chronicles_
-books. In the books, the artificery, or workshop, is called the Fishery for
-short. The Fishery is where things are built.
+books. In the books, the artificery, or workshop, is called the kishery for
+short. The kishery is where things are built.
 
 ## License
 
-Fishery is Copyright © 2021 Stephen Hanson and thoughtbot. It is free
+kishery is Copyright © 2021 Stephen Hanson and thoughtbot. It is free
 software, and may be redistributed under the terms specified in the
 [LICENSE](/LICENSE) file.
 
@@ -436,7 +436,7 @@ software, and may be redistributed under the terms specified in the
 
 <img src="https://thoughtbot.com/thoughtbot-logo-for-readmes.svg" width="375" />
 
-Fishery is maintained and funded by thoughtbot, inc.
+kishery is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!

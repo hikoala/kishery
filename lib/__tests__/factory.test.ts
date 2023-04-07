@@ -1,4 +1,4 @@
-import { Factory, HookFn } from 'fishery';
+import { Factory, HookFn } from 'kishery';
 
 type User = {
   id: string;

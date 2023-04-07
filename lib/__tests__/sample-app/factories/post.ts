@@ -1,4 +1,4 @@
-import { Factory } from 'fishery';
+import { Factory } from 'kishery';
 import { Post } from '../types';
 import userFactory from './user';
 

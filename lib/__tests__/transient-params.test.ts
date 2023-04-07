@@ -1,4 +1,4 @@
-import { Factory } from 'fishery';
+import { Factory } from 'kishery';
 
 describe('Transient params', () => {
   interface User {

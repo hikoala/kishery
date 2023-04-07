@@ -1,6 +1,6 @@
 {
-  "name": "fishery",
-  "version": "2.2.2",
+  "name": "kishery",
+  "version": "2.3.0",
   "description": "A library for setting up JavaScript factories to help build objects as test data, with full TypeScript support",
   "keywords": [
     "factories",
@@ -11,9 +11,9 @@
     "mock",
     "test data"
   ],
-  "main": "dist/fishery.js",
-  "module": "dist/fishery.mjs",
-  "unpkg": "dist/fishery.umd.js",
+  "main": "dist/kishery.js",
+  "module": "dist/kishery.mjs",
+  "unpkg": "dist/kishery.umd.js",
   "files": [
     "dist"
   ],
@@ -32,14 +32,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thoughtbot/fishery.git"
+    "url": "git+https://github.com/hikoala/kishery.git"
   },
-  "author": "Stephen Hanson <shanson@thoughtbot.com> (https://shanson.co)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thoughtbot/fishery/issues"
+    "url": "https://github.com/hikoala/kishery/issues"
   },
-  "homepage": "https://github.com/thoughtbot/fishery#readme",
+  "homepage": "https://github.com/hikoala/kishery#readme",
   "prettier": {
     "arrowParens": "avoid",
     "useTabs": false,

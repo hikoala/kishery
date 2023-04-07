@@ -1,4 +1,4 @@
-import { Factory } from 'fishery';
+import { Factory } from 'kishery';
 import { sleep } from './helpers/sleep';
 
 type Post = { id: string };

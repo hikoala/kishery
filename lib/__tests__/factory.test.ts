@@ -34,6 +34,15 @@ describe('factory.build', () => {
 });
 
 describe('factory.buildList', () => {
+  it.each([0, -1])(
+    'throws if the number of object requested is below 1 (%i)',
+    count => {
+      expect(() => userFactory.buildList(count)).toThrowError(
+        'You should build at least one object',
+      );
+    },
+  );
+
   it('builds a list of objects with the specified properties', () => {
     const users = userFactory.buildList(2, { name: 'susan' });
     expect(users.length).toBe(2);
@@ -98,6 +107,15 @@ describe('factory.create', () => {
 });
 
 describe('factory.createList', () => {
+  it.each([0, -1])(
+    'throws if the number of object requested is below 1 (%i)',
+    count => {
+      expect(() => userFactory.buildList(count)).toThrowError(
+        'You should build at least one object',
+      );
+    },
+  );
+
   it('creates a list of objects with the specified properties', async () => {
     const promise = userFactory.createList(2, { name: 'susan' });
     expect(promise).toBeInstanceOf(Promise);

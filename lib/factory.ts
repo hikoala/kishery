@@ -50,13 +50,21 @@ export class Factory<T, I = any, C = T, P = DeepPartial<T>> {
     return this.builder(params, options).build();
   }
 
-  buildList(number: number, params?: P, options: BuildOptions<T, I> = {}): T[] {
+  buildList(
+    number: number,
+    params?: P,
+    options: BuildOptions<T, I> = {},
+  ): [T, ...T[]] {
+    if (number < 1) {
+      throw new Error('You should build at least one object');
+    }
+
     let list: T[] = [];
     for (let i = 0; i < number; i++) {
       list.push(this.build(params, options));
     }
 
-    return list;
+    return list as [T, ...T[]];
   }
 
   /**
@@ -72,13 +80,13 @@ export class Factory<T, I = any, C = T, P = DeepPartial<T>> {
     number: number,
     params?: P,
     options: BuildOptions<T, I> = {},
-  ): Promise<C[]> {
+  ): Promise<[C, ...C[]]> {
     let list: Promise<C>[] = [];
     for (let i = 0; i < number; i++) {
       list.push(this.create(params, options));
     }
 
-    return Promise.all(list);
+    return Promise.all(list) as Promise<[C, ...C[]]>;
   }
 
   /**

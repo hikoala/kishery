@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   workflow_dispatch:
@@ -55,8 +55,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
-          registry-url: 'https://npm.pkg.github.com'
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
           scope: '@hikoala'
       - name: Use node_modules and yarn cache
         uses: actions/cache@v3

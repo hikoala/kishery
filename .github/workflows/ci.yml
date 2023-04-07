@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - 'v*'
+  pull_request:
+    types:
+      # The first 3 are the defaults.
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - '**'
+
+jobs:
+  ci:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        node-versions: [14, 16, 18]
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Use node_modules and yarn cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/yarn
+          key: ${{ matrix.node-version }}-modules-${{ hashFiles('yarn.lock') }}
+        id: yarn-cache
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Compile TypeScript
+        run: yarn tsc
+      - name: Check code formatting
+        run: yarn pretty:check
+      - name: Check types
+        run: yarn test:types
+      - name: Run tests
+        run: yarn test

@@ -62,7 +62,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.cache/yarn
-          key: ${{ matrix.node-version }}-modules-${{ hashFiles('yarn.lock') }}
+          key: 18-modules-${{ hashFiles('yarn.lock') }}
         id: yarn-cache
       - name: Install dependencies
         run: yarn install --frozen-lockfile

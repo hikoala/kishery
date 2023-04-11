@@ -67,7 +67,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Compile TypeScript
-        run: yarn tsc
+        run: yarn run build
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

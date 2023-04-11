@@ -16,13 +16,13 @@ just without the extra typechecking that comes with TypeScript.
 Install kishery with:
 
 ```
-npm install --save-dev kishery
+npm install --save-dev @hikoala/kishery
 ```
 
 or
 
 ```
-yarn add --dev kishery
+yarn add --dev @hikoala/kishery
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ objects. Here's how it's done:
 
 ```typescript
 // factories/user.ts
-import { Factory } from 'kishery';
+import { Factory } from '@hikoala/kishery';
 import { User } from '../my-types';
 import postFactory from './post';
 
@@ -412,14 +412,6 @@ export default postFactory;
 A factory's sequence can be rewound with `rewindSequence()`.
 This sets the sequence back to its original starting value.
 
-## Contributing
-
-See the [CONTRIBUTING] document.
-Thank you, [contributors]!
-
-[contributing]: CONTRIBUTING.md
-[contributors]: https://github.com/thoughtbot/kishery/graphs/contributors
-
 ## Credits
 
 This project name was inspired by Patrick Rothfuss' _Kingkiller Chronicles_
@@ -428,11 +420,10 @@ short. The kishery is where things are built.
 
 ## License
 
-kishery is Copyright © 2021 Stephen Hanson and thoughtbot. It is free
-software, and may be redistributed under the terms specified in the
+It is free software, and may be redistributed under the terms specified in the
 [LICENSE](/LICENSE) file.
 
-### About thoughtbot
+### About thoughtbot (original authors)
 
 <img src="https://thoughtbot.com/thoughtbot-logo-for-readmes.svg" width="375" />
 
@@ -443,6 +434,8 @@ We love open source software!
 See [our other projects][community] or
 [hire us][hire] to design, develop, and grow your product.
 
+[contributing]: CONTRIBUTING.md
+[contributors]: https://github.com/thoughtbot/kishery/graphs/contributors
 [community]: https://thoughtbot.com/community?utm_source=github
 [hire]: https://thoughtbot.com/hire-us?utm_source=github
 [factory_bot]: https://github.com/thoughtbot/factory_bot
